@@ -1,9 +1,13 @@
 node_modules
 .next
 out
+
+# Local environment configuration (keep public-safe templates tracked)
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+!.env.local.example
+
 coverage
 .DS_Store
 *.tsbuildinfo
