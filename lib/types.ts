@@ -1,0 +1,4 @@
+export type InventoryItem = { id: string; user_id: string; ingredient_id: string | null; ingredient_name: string; quantity: number; unit: string; storage_location: 'refrigerator'|'freezer'|'pantry'|'kitchen'; expiry_date: string | null; verified: boolean; created_at: string };
+export type RecipeIngredient = { ingredient_id?: string; ingredient_name: string; quantity: number; unit: string; optional?: boolean };
+export type Recipe = { id: string; name: string; region: string; meal_type: string; diet: string; prep_minutes: number; cook_minutes: number; servings: number; difficulty: string; ingredients: RecipeIngredient[]; instructions: string[]; tags: string[]; allergens?: string[]; source_status: string };
+export type ShoppingItem = { id: string; ingredient_name: string; quantity: number; unit: string; checked: boolean };
